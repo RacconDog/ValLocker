@@ -10,6 +10,7 @@ data["Reyna"] := ["Duelist"]
 data["Waylay"] := ["Duelist"]
 data["Jett"] := ["Duelist"]
 data["Cypher"] := ["Sentinel"]
+data["Gekko"] := ["Initiator"]
 
 myGui := Gui("Resize", "Simple Selection")
 myGui.OnEvent("Close", (*) => ExitApp())
