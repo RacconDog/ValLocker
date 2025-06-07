@@ -53,7 +53,7 @@ while (true)
         FoundX := 0
         FoundY := 0
         
-        if (ImageSearch(&FoundX, &FoundY, 0, 0, 1920, 1080, "*25 " A_ScriptDir "\data\" agentClass "Icon.png") = 1 && foundAgentClass = false)
+        if (ImageSearch(&FoundX, &FoundY, 0, 0, 1920, 1080, "*25 " A_ScriptDir "\data\" agentClass "Icon.png") = 1)
             {
                 ; MsgBox "found class"
                 foundAgentClass := true
@@ -61,7 +61,7 @@ while (true)
                 Sleep(50)
                 Click 5
             }
-            if (ImageSearch(&FoundX, &FoundY, 0, 0, 1920, 1080, "*5 " A_ScriptDir . "\data\" agentName "Icon.png") && foundAgentClass = true)
+        if (ImageSearch(&FoundX, &FoundY, 0, 0, 1920, 1080, "*5 " A_ScriptDir . "\data\" agentName "Icon.png"))
                 {
                     ; MsgBox((FoundX +15), (FoundY +15))
                     ; Sleep(50)
@@ -73,13 +73,12 @@ while (true)
                     Sleep(200)
                     ; Click(1)
                     Click "Down"
-                    Sleep(100)
+                    Sleep(200)
                     Click "Up"
                     ; Click(1)
                     foundAgentClass := false
-                    Sleep(100000)
                     ; Click(10)
-                    ; Sleep(100000)
+                    ; Sleep()
                     ; Pause
     }
 }
